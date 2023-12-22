@@ -9,6 +9,8 @@ class Solution:
                 for row in range(i,i+3):
                     for col in range(j,j+3):
                         sums += grid[row][col]
+                print(sums)
                 sums = sums-(grid[i+1][j]+grid[i+1][j+2])
+                print(sums)
                 maxs = max(maxs,sums)
         return maxs
