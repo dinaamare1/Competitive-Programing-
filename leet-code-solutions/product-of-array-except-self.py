@@ -7,9 +7,7 @@ class Solution:
             if nums[i] != 0:
                 mul *= nums[i]
         for i in range(len(nums)):
-            if count == 1 and nums[i] != 0:
-                ans.append(0)
-            elif count > 1:
+            if count == 1 and nums[i] != 0 or count>1:
                 ans.append(0)
             elif nums[i] !=0:
                 ans.append(mul//nums[i])
