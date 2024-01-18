@@ -10,9 +10,7 @@ class Solution:
             counter_prefix[prefix] += 1 # adds the prefix to the hashmap
         return result
 
-
-
-        # uses prefix extra o(n) space 
+        # prefixsum with array
 #       -----------------------------------       
         # n = len(nums)
         # prefix = [0]*(n+1)
@@ -25,3 +23,17 @@ class Solution:
         #     ans += dic[val]
         #     dic[new] += 1
         # return ans
+
+
+
+
+        # brute force
+# ---------------------
+        # count = 0
+        # for i in range(len(nums)):
+        #     sums = 0
+        #     for j in range(i,len(nums)):
+        #         sums += nums[j]
+        #         if sums == k:
+        #             count += 1   
+        # return count
