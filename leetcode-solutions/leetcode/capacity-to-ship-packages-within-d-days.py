@@ -8,21 +8,18 @@ class Solution:
                 if sums> mid:
                     count += 1
                     sums = weight
-                
             return count
-
-        upper = sum(weights) + 1
-        lower = max(weights) - 1
-        while lower + 1 < upper:
+        upper = sum(weights)
+        lower = max(weights)
+        while lower <= upper:
             mid = ((lower + upper) // 2)
-            print(mid,lower,upper)
             vals = checkDays(mid)
-            print(vals)
+            
             if vals <= days:
-                upper = mid
+                upper = mid -1
             else:
-                lower = mid
-        return upper
+                lower = mid + 1
+        return lower
 
 
             
