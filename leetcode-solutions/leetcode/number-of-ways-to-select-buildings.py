@@ -1,16 +1,15 @@
 class Solution:
     def numberOfWays(self, s: str) -> int:
-        
         zeros = s.count('0')
-        ones = len(s)-zeros 
+        ones = s.count('1')
         total = 0
-        prev_one, prev_zero = 0, 0
+        one,zero = 0, 0
         for num in s:
             if num == '0':
-                total += prev_one * (ones-prev_one)
-                prev_zero += 1 
+                total += one * (ones-one)
+                zero += 1 
             else:
-                total += prev_zero * (zeros-prev_zero)
-                prev_one += 1
+                total += zero * (zeros-zero)
+                one += 1
         return total
         
